@@ -1,0 +1,8 @@
+/__pycache__/
+/.vscode/
+*.png
+*.gif
+*.pyc
+*.npy
+*.txt
+log.txt
