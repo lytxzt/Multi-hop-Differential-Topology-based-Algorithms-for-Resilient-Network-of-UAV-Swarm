@@ -139,7 +139,7 @@ class MDSG_GC_batch:
                 # print(num.cpu().data.numpy(), num_)
                 num_list.append(num)
 
-                loss_k = 5000*(num-1) + torch.max(torch.norm(final_positions-remain_positions, dim=1)) + torch.sum(torch.norm(final_positions-remain_positions, dim=1))/num_remain
+                loss_k = 5000*(num-1) + torch.max(torch.norm(final_positions-remain_positions, dim=1)) + torch.sum(torch.norm(final_positions-remain_positions, dim=1, p=1))/num_remain
                 # loss_k = 5000*(num-1) + torch.sum(torch.norm(final_positions-remain_positions, dim=1))/num_remain
                 loss_list.append(loss_k)
                 # loss_step.append(torch.max(torch.norm(final_positions-remain_positions, dim=1)))
